@@ -17,7 +17,7 @@
             <script src="js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
         <![endif]-->
     </head>
-    <body ng-app="dooodah">
+    <body ng-app="dooodah" ng-controller="rootController">
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
@@ -43,6 +43,8 @@
         <script src="js/Controllers/homepage-controller.js"></script>
         <script src="js/Directives/category-directive.js"></script>
         <script src="js/Directives/event-directive.js"></script>
+        <script src="js/Controllers/root-controller.js"></script>
+        <script src="js/Factories/yelp-service.js"></script>
 
         <script>
             var _gaq=[['_setAccount','UA-40677953-1'],['_trackPageview']];
