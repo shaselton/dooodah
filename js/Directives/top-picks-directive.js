@@ -1,14 +1,14 @@
-dodah.directive('eventSummary', [function(){
+dodah.directive('topPicks', [function(){
 	return{
 		restrict: 'E',
 		replace: true,
 		scope:{
-			eventData: '='
+			picksData: '='
 		},
 		controller: function($scope){
 		},
 		link:function(scope, element, attrs){
 		},
-		templateUrl: 'partials/event-directive.html'
+		templateUrl: 'partials/top-picks-directive.html'
 	}
 }]);

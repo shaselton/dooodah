@@ -1,7 +1,14 @@
 <div class="event">
-	<div class="date">{{eventData.date}}</div>
-	<img ng-src="{{eventData.imgSrc}}"/>
-	<div class="title">{{eventData.title}}</div>
-	<div class="location">{{eventData.location}}</div>
-	<div class="blurb">{{eventData.blurb}}</div>
+	<div class="date">
+		<div class="day">{{eventData.date.day}}</div>
+		<div class="date-format">{{eventData.date.dateFormat}}</div>
+		<div class="time">{{eventData.date.time}}</div>
+	</div>
+	<img class="img" ng-src="{{eventData.imgSrc}}"/>
+	<div class="title">
+		<div class="event-name">{{eventData.title.eventName}}</div>
+		<div class="place">{{eventData.title.place}}</div>
+		<div class="city-state">{{eventData.title.cityState}}</div>
+	</div>
+	<div class="blurb clearfix">{{eventData.blurb}}</div>
 </div>

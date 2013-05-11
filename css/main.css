@@ -95,21 +95,97 @@ body {
     position: relative;
 }
 
-.main-container .main-events{
-    font-family: 'Palatino', 'Arial';
-    font-size: 24px;
-    font-weight: bold;
+.main-container .main-events,
+span.category-title{
+    font: bold 24px 'Palatino', 'Arial';
 }
 
 span.category-title{
-    font-family: 'Palatino', 'Arial';
-    font-size: 24px;
-    font-weight: bold;
     padding-bottom: 16px;
 }
 
 .category{
     cursor: pointer;
+}
+
+.event{
+    border-bottom: 1px solid #000;
+    padding-bottom:23px;
+    margin-top:23px;
+}
+
+.event .date{
+    float: left;
+    margin-right: 30px;  
+}
+
+.event .date .day,
+.event .date .time{
+    font: 12px 'Helvetica', 'Arial';
+    text-transform: uppercase;
+}
+
+.event .date .date-format{
+    font: bold 18px/25px 'Helvetica', 'Arial';
+    text-transform: uppercase;
+}
+
+.event .img{
+    float: left;
+    height: 57px;
+    margin-right: 30px;
+    width: 57px;
+}
+
+.event .title{
+    float: left;
+}
+
+.event .title .event-name{
+    color: #b01d20;
+    font: bold 16px 'Helvetica';
+    margin-bottom:2px;
+}
+
+.event .title .place,
+.event .title .city-state{
+    font: 12px/17px 'Helvetica';
+}
+
+.event .blurb{
+   display: inline-block; 
+   line-height: 16px;
+   font-size:14px;
+   margin-top: 10px;
+   width: 100%;
+}
+
+.top-picks{
+    border-bottom: 25px;
+    margin-top: 25px;
+}
+
+.top-picks .attendance{
+    background-color:#b01d20;
+    color: #fff;
+    height:48px;
+    float: left;
+    margin-right: 30px;
+    padding-top: 10px;
+    text-align: center;
+    width:48px;
+}
+
+.top-picks .attendance .number{
+    font: bold 20px/13px 'Helvetica';
+}
+.top-picks .attendance .text{
+    font: bold 10px 'Helvetica';
+}
+
+.top-picks .details .title{
+    color:#b01d20;
+    font: bold 16px 'Helvetica';
 }
 
 .main-container .background-category{
@@ -156,11 +232,6 @@ span.category-title{
 .main aside {
     background: #f16529;
 }
-
-.title {
-    color: white;
-}
-
 /* ==============
     MOBILE: Menu
    ============== */
@@ -302,14 +373,14 @@ nav a:hover {
     WIDE: Main
    ============ */
 
-    .main article {
+    .main section.left {
         float: left;
-        width: 57%;
+        width: 46%;
     }
 
-    .main aside {
+    .main section.right {
         float: right;
-        width: 28%;
+        width: 46%;
     }
 }
 
