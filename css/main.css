@@ -197,10 +197,14 @@ span.category-title{
 }
 
 .main-container section .category{
-    display: inline-block;
+    display: none;
     height: 246px;
     margin-right: 17px;
     width: 217px;
+}
+
+.header-category .category:nth-child(-n+1){
+    display: inline-block;
 }
 
 .main-container section .category .title{
@@ -308,14 +312,11 @@ nav a:hover {
 
 
 
-
-
-
 /* ==========================================================================
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 520px) {
 
 /* ====================
     INTERMEDIATE: Menu
@@ -348,9 +349,14 @@ nav a:hover {
     .oldie nav a {
         margin: 0 0.7%;
     }
+
+    .header-category .category:nth-child(-n+2){
+        display: inline-block;
+    }
+
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 780px) {
 
 /* ====================
     WIDE: CSS3 Effects
@@ -382,6 +388,13 @@ nav a:hover {
         float: right;
         width: 46%;
     }
+
+    .header-category .category:nth-child(-n+3){
+        display: inline-block;
+    }
+
+
+
 }
 
 @media only screen and (min-width: 1140px) {
@@ -394,6 +407,12 @@ nav a:hover {
         width: 1026px; /* 1140px - 10% for margins */
         margin: 0 auto;
     }
+
+    .header-category .category:nth-child(-n+4){
+        display: inline-block;
+    }
+
+
 }
 
 /* ==========================================================================

@@ -2,9 +2,13 @@
     <div class="background-category"></div>
     <div class="main wrapper clearfix">
         <span class="category-title">Search for Things to do</span>
-        <section>
-            <header-category ng-repeat="data in categories.header" category-data="data"></header-category>
-        </section>
+        <div style="width:100%;">
+            <section class="header-category">
+                
+                    <header-category ng-repeat="data in categories.header" category-data="data"></header-category>
+                
+            </section>
+        </div>
         <section class="left">
             <h2 class="main-events">
                 All Events in Orange County
@@ -16,7 +20,7 @@
             <h2 class="main-events">
                Top Picks for the Week
             </h2>
-            <top-picks ng-repeat="data in events" event-data="data"></top-picks>
+            <top-picks ng-repeat="data in events" picks-data="data"></top-picks>
         </section>
     </div> <!-- #main -->
 </div> <!-- #main-container -->
