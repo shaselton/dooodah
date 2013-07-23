@@ -1,0 +1,11 @@
+/* line 4, sass-main.scss */
+#navbar {
+  border-bottom-color: #ce4dd6;
+  border-bottom-style: solid; }
+
+/* line 11, sass-main.scss */
+a {
+  color: #ce4dd6; }
+  /* line 13, sass-main.scss */
+  a:hover {
+    border-bottom: solid 1px; }

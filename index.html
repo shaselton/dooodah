@@ -17,7 +17,7 @@
             <script src="js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
         <![endif]-->
     </head>
-    <body ng-app="dooodah" ng-controller="rootController">
+    <body ng-app="dooodah">
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
@@ -33,20 +33,23 @@
         
 
         <div class="footer-container">
-            <footer class="wrapper">
-                <h3>footer</h3>
-            </footer>
         </div>
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
-
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyyHWid4NZ1H7xkiQzNiEk4aHhj2S7a3w&sensor=false"></script>
+        <script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/oauth.js"></script>
+        <script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/sha1.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.js"></script>
+        <script src="//code.angularjs.org/1.0.6/angular-resource.min.js"></script>
         <script src="js/app.js"></script>
+        <script src="js/Modules/googlemap-module.js"></script>
+        <script src="js/Factories/yelp-service.js"></script>
         <script src="js/Controllers/homepage-controller.js"></script>
         <script src="js/Directives/category-directive.js"></script>
+        <script src="js/Directives/googlemaps-directive.js"></script>
         <script src="js/Directives/event-directive.js"></script>
         <script src="js/Directives/top-picks-directive.js"></script>
         <script src="js/Controllers/root-controller.js"></script>
-        <script src="js/Factories/yelp-service.js"></script>
-
+        <script src="js/Controllers/category-controller.js"></script>
         <script>
             var _gaq=[['_setAccount','UA-40677953-1'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];

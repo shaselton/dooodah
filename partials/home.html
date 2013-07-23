@@ -2,7 +2,7 @@
     <div class="background-category"></div>
     <div class="main wrapper clearfix">
         <span class="category-title">Search for Things to do</span>
-        <div style="width:100%;">
+        <div class="header-wrapper">
             <section class="header-category">
                 
                     <header-category ng-repeat="data in categories.header" category-data="data"></header-category>
@@ -11,7 +11,7 @@
         </div>
         <section class="left">
             <h2 class="main-events">
-                All Events in Orange County
+                All {{category}} in Orange County
             </h2>
             <event-summary ng-repeat="data in events" event-data="data"></event-summary>
         </section>

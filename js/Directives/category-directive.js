@@ -15,6 +15,7 @@ dodah.directive('headerCategory', [function(){
 				}
 				scope.title = scope.categoryData.title;
 				scope.imgSrc = scope.categoryData.imgSrc;
+				scope.url = scope.categoryData.url;
 			});
 		},
 		templateUrl: 'partials/category-directive.html'

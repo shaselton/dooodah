@@ -6,7 +6,7 @@
 	</div>
 	<img class="img" ng-src="{{eventData.imgSrc}}"/>
 	<div class="title">
-		<div class="event-name">{{eventData.title.eventName}}</div>
+		<a ng-href="#/category/{{eventData.id}}"><div class="event-name">{{eventData.title.eventName}}</div></a>
 		<div class="place">{{eventData.title.place}}</div>
 		<div class="city-state">{{eventData.title.cityState}}</div>
 	</div>

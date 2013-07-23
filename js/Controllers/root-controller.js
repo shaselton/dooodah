@@ -1,3 +1,3 @@
-dodah.controller('rootController', [ '$scope', 'yelpAIP', function( $scope, yelpAIP ){
+//dodah.controller('rootController', [ '$scope', 'yelpAIP', function( $scope, yelpAIP ){
 	
-}]);
+//}]);
