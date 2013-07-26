@@ -9,6 +9,7 @@
 
 		  	var mapOptions = {
 				    zoom: 15,
+				    disableDefaultUI: true,
 				    mapTypeId: google.maps.MapTypeId.ROADMAP
 		  		},
 		  		selector = selector;

@@ -7,20 +7,25 @@
 		$scope.data.venue = {};
 		$scope.events = [];
 
-		yelpAPI.makeBusinessCall( $routeParams.yelpId );
-		$rootScope.$on('yelpBusinessResults',function(msg, data){
-			$scope.data.image = data.image_url;
-			$scope.data.title = data.name;
-			$scope.data.venue.title = data.name;
-			$scope.data.venue.phone = data.phone;
-			$scope.data.venue.price = "??? <unknown> TODO: change me!";
-			$scope.mapOptions = setMaps( data.location );
-			$scope.data.information = data.snippet_text;
-			$scope.$apply();
+		$scope.init = function(){
+			makeBusinessCall();
+		};
 
-			getSimilarCategories( data.categories[0] ); // just taking the first suggestion offer they give
-			
-		});
+		var makeBusinessCall = function(){
+			yelpAPI.makeBusinessCall( $routeParams.yelpId );
+			$rootScope.$on('yelpBusinessResults',function(msg, data){
+				$scope.data.image = data.image_url;
+				$scope.data.title = data.name;
+				$scope.data.venue.title = data.name;
+				$scope.data.venue.phone = data.phone;
+				$scope.data.venue.price = "??? <unknown> TODO: change me!";
+				$scope.mapOptions = setMaps( data.location );
+				$scope.data.information = data.snippet_text;
+				$scope.$apply();
+				getSimilarCategories( data.categories[0] ); // just taking the first suggestion offer they give				
+			});
+		};
+		
 
 		var setMaps = function( mapInfo ){
 			return{
@@ -36,7 +41,7 @@
 		};
 
 		$rootScope.$on('yelpResults',function(msg, data){
-
+			$scope.events = [];
 			for( var i = 0, len = data.businesses.length; i < len; i++ ){
 				$scope.events.push({
 					date:{

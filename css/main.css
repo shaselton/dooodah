@@ -204,6 +204,7 @@ span.category-title{
     display: none;
     height: 246px;
     margin-right: 17px;
+    opacity: 0;
     width: 217px;
 }
 
@@ -244,8 +245,8 @@ span.category-title{
 
 
 #map-canvas{
-    width: 310px;
-    height: 125px;
+    width: 218px;
+    height: 73px;
 }
 
 .item-wrapper .image img{
@@ -256,14 +257,30 @@ span.category-title{
 
 .item-wrapper .image,
 .item-wrapper .date,
-.item-wrapper .venue,
-.item-wrapper .map,
 .item-wrapper .left{
     float: left;
 }
 
+.item-wrapper .venue,
+.item-wrapper .map,
 .item-wrapper .right{
     float: right;
+}
+
+.item-wrapper .map{
+    margin-right: 60px;
+}
+
+.item-wrapper .venue{
+    color: #000;
+    font: normal 12px 'Helvetica';
+    margin-right: 40px;
+    width: 150px;
+}
+
+.venue .venue-title{
+    color: #b01d20;
+    font: bold 16px 'Helvetica';
 }
 
 .item-wrapper .event-title{
@@ -273,6 +290,7 @@ span.category-title{
 
 .item-wrapper .information{
     display: inline-block;
+    margin-top: 21px;
 }
 
 .category-container .date .day{
@@ -290,11 +308,12 @@ span.category-title{
 }
 
 .item-info{
-    width: 77%;
+    width: 75%;
 }
 
 .button-actions{
     float: right;
+    text-align: center;
 }
 
 .button-actions .email-btn,
@@ -308,8 +327,22 @@ span.category-title{
     background: linear-gradient(to right,  #f3eeee 0%,#fbf9f9 28%,#fefefd 48%,#fbfbfb 68%,#f3efef 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3eeee', endColorstr='#f3efef',GradientType=1 ); /* IE6-9 */
     border: 1px solid #908b8b;
+    cursor: pointer;
+    font: normal 12px/33px "Helvetica", Arial;
     height: 33px;
     width: 102px;
+}
+
+.button-actions .email-btn{
+    margin-bottom: 10px;
+}
+
+.left .event:last-child{
+    border-bottom: none;
+}
+
+.category-page{
+    background: url(../img/cat-bg.png) repeat;
 }
 
 /* ==============
@@ -428,6 +461,7 @@ nav a:hover {
 
     .header-category .category:nth-child(-n+2){
         display: inline-block;
+        opacity: 1;
     }
 
     .header-wrapper{
@@ -460,18 +494,19 @@ nav a:hover {
     WIDE: Main
    ============ */
 
-    .main section.left {
+    section.left {
         float: left;
         width: 46%;
     }
 
-    .main section.right {
+    section.right {
         float: right;
         width: 46%;
     }
 
     .header-category .category:nth-child(-n+3){
         display: inline-block;
+        opacity: 1;
     }
 
     .header-wrapper {
@@ -485,8 +520,9 @@ nav a:hover {
 
 @media only screen and (min-width: 1070px) {
 
-    .header-category .category:nth-child(-n+2){
+    .header-category .category:nth-child(-n+3){
         display: inline-block;
+        opacity: 1;
     }
 
 }
@@ -505,10 +541,15 @@ nav a:hover {
 
     .header-category .category:nth-child(-n+4){
         display: inline-block;
+        opacity: 1;
     }
 
     .header-wrapper {
         width: 100% !important;
+    }
+
+    .main-information{
+        margin-bottom: 30px;
     }
 
 
@@ -518,10 +559,10 @@ nav a:hover {
    Helper classes
    ========================================================================== */
 .header-wrapper{
-  -webkit-transition: width 1.0s ease-out; 
-     -moz-transition: width 1.0s ease-out; 
-       -o-transition: width 1.0s ease-out; 
-          transition: width 1.0s ease-out; 
+  -webkit-transition: width 0.5s ease-out, opacity 1.0s ease-out; 
+     -moz-transition: width 0.5s ease-out, opacity 1.0s ease-out;
+       -o-transition: width 0.5s ease-out, opacity 1.0s ease-out;
+          transition: width 0.5s ease-out, opacity 1.0s ease-out;
     width: 60%;
     margin: 0 auto;
 }
