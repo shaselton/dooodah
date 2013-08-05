@@ -18,10 +18,10 @@
 		  	angular.extend( mapOptions, options );
 
 		  	if( !selector ){
-				selector = 'map-canvas';
+				selector = document.getElementById( 'map-canvas' );
 		  	}
 
-			map = new google.maps.Map(document.getElementById( selector ), mapOptions);
+			map = new google.maps.Map( selector, mapOptions);
 			new google.maps.Marker({ position: options.center,  map: map,  title: '' });
 		}
 
@@ -44,8 +44,8 @@
 		}
 
 		return{
-			getMap:function(options){
-				return generateMap( options );
+			getMap:function(options, selector){
+				return generateMap( options, selector );
 			}
 		};
 

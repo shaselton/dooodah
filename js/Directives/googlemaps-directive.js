@@ -7,10 +7,10 @@
 			scope:{
 				options: '='
 			},
-			template: '<div id="map-canvas"></div>',
+			template: '<div class="map-canvas"></div>',
 			controller: [ '$scope', '$element', 'googleMapsService', function( $scope, $element, googleMapsService ){
 				$scope.addMap = function(){
-					googleMapsService.getMap( $scope.options, 'google-map' );
+					googleMapsService.getMap( $scope.options, $element[0] );
 				};
 			}],
 			link: function(scope, element, attrs){

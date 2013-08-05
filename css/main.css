@@ -147,8 +147,13 @@ span.category-title{
 
 .event .title .event-name{
     color: #b01d20;
+    cursor: pointer;
     font: bold 16px 'Helvetica';
     margin-bottom:2px;
+    width: 243px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .event .title .place,
@@ -164,8 +169,14 @@ span.category-title{
    width: 100%;
 }
 
+.event .blurb a{
+    color: #b01d20;
+    font: normal 14px "Palatino";
+}
+
 .top-picks{
-    border-bottom: 25px;
+    border-bottom: 1px solid #7e7e7e;
+    padding-bottom: 25px;
     margin-top: 25px;
 }
 
@@ -210,6 +221,7 @@ span.category-title{
 
 .header-category .category:nth-child(-n+1){
     display: inline-block;
+    opacity: 1;
 }
 
 .main-container section .category .title{
@@ -244,7 +256,7 @@ span.category-title{
 
 
 
-#map-canvas{
+.map-canvas{
     width: 218px;
     height: 73px;
 }
@@ -290,6 +302,7 @@ span.category-title{
 
 .item-wrapper .information{
     display: inline-block;
+    line-height: 18px;
     margin-top: 21px;
 }
 
@@ -398,6 +411,16 @@ nav a:hover {
     padding: 20px 0;
 }
 
+.category a{
+    text-decoration: none;
+}
+
+.details .place,
+.details .city-state{
+    font-size: 12px;
+    line-height: 12px;
+}
+
 /* ===============
     ALL: IE Fixes
    =============== */
@@ -409,14 +432,6 @@ nav a:hover {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-
-
-
-
-
-
-
 
 
 
@@ -481,9 +496,6 @@ nav a:hover {
     WIDE: Menu
    ============ */
 
-    .title {
-        float: left;
-    }
 
     nav {
         float: right;
@@ -504,14 +516,14 @@ nav a:hover {
         width: 46%;
     }
 
-    .header-category .category:nth-child(-n+3){
+    .header-category .category:nth-child(-n+2){
         display: inline-block;
         opacity: 1;
     }
 
     .header-wrapper {
         margin: 0 auto;
-        width: 73% !important;
+        /*width: 73% !important;*/
     }
 
 
@@ -559,10 +571,10 @@ nav a:hover {
    Helper classes
    ========================================================================== */
 .header-wrapper{
-  -webkit-transition: width 0.5s ease-out, opacity 1.0s ease-out; 
-     -moz-transition: width 0.5s ease-out, opacity 1.0s ease-out;
-       -o-transition: width 0.5s ease-out, opacity 1.0s ease-out;
-          transition: width 0.5s ease-out, opacity 1.0s ease-out;
+  -webkit-transition: width 0.5s ease-out, opacity 1.0s ease-out 1.0s; 
+     -moz-transition: width 0.5s ease-out, opacity 1.0s ease-out 1.0s;
+       -o-transition: width 0.5s ease-out, opacity 1.0s ease-out 1.0s;
+          transition: width 0.5s ease-out, opacity 1.0s ease-out 1.0s;
     width: 60%;
     margin: 0 auto;
 }
@@ -636,6 +648,10 @@ nav a:hover {
         color: #000 !important; /* Black prints faster: h5bp.com/s */
         box-shadow: none !important;
         text-shadow: none !important;
+    }
+
+    .map{
+        display: none !important;
     }
 
     a,

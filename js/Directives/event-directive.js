@@ -1,4 +1,4 @@
-dodah.directive('eventSummary', [function(){
+dodah.directive('eventSummary', [ '$location', 'eventService', function( $location, eventService ){
 	return{
 		restrict: 'E',
 		replace: true,
@@ -6,6 +6,10 @@ dodah.directive('eventSummary', [function(){
 			eventData: '='
 		},
 		controller: function($scope){
+			$scope.eventDetails = function( obj ){
+				eventService.setEvent( obj );
+				$location.path('/category' );
+			}
 		},
 		link:function(scope, element, attrs){
 		},

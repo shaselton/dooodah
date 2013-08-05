@@ -1,14 +1,14 @@
 <div class="event">
 	<div class="date">
-		<div class="day">{{eventData.date.day}}</div>
-		<div class="date-format">{{eventData.date.dateFormat}}</div>
-		<div class="time">{{eventData.date.time}}</div>
+		<div class="day">{{eventData.date | date:'EEE'}}</div>
+		<div class="date-format">{{eventData.date | date:'M/d'}}</div>
+		<div class="time">{{eventData.date | date:'h a'}}</div>
 	</div>
 	<img class="img" ng-src="{{eventData.imgSrc}}"/>
 	<div class="title">
-		<a ng-href="#/category/{{eventData.id}}"><div class="event-name">{{eventData.title.eventName}}</div></a>
+		<div ng-click="eventDetails(eventData)"><div class="event-name">{{eventData.title.eventName}}</div></div>
 		<div class="place">{{eventData.title.place}}</div>
 		<div class="city-state">{{eventData.title.cityState}}</div>
 	</div>
-	<div class="blurb clearfix">{{eventData.blurb}}</div>
+	<div class="blurb clearfix">{{eventData.blurb}} <div ng-click="eventDetails(eventData)">more info >></div></div>
 </div>

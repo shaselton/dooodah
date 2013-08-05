@@ -1,0 +1,41 @@
+<div class="wrapper">
+	<div class="listing-container clearfix">
+	   <div class="left-column">
+	   		<div class="column-title">Search Events</div>
+	   		<div class="calendar">
+	   			<img src="img/calendar.png" />
+	   		</div>
+	   		<div class="category-title">CATEGORY</div>
+	   		<div class="listing-buttons button-actions">
+				<div class="listing-btn" ng-repeat="button in catButtons" ng-click="updateListings(button.name)">{{button.name}}</div>
+			</div>
+	   </div>
+	   <div class="right-column">
+	   		<div class="column-title">All {{category}} Events in Orange County</div>
+	   		<div class="item-wrapper" ng-repeat="data in events"> 
+	   			<div class="top-information">
+	   				<img class="item-image" ng-src="{{data.imgSrc}}" />
+	   				<div class="group">
+	   					<div class="map">
+	   						<google-maps options="data.mapOptions"></google-maps>
+	   					</div>
+
+	   					<div ng-click="eventDetails(data)" class="title">{{data.title.eventName}}</div>
+	   					<div class="date">
+							<div class="day">{{data.date | date:'EEE'}}</div>
+							<div class="date-format">{{data.date | date:'M/d'}}</div>
+							<div class="time">{{data.date | date:'h a'}}</div>
+						</div>
+
+						<div class="location">
+							<div>{{data.venueName}}</div>
+							<div>{{data.title.cityState}}</div>
+						</div>
+
+	   					
+	   				</div>
+	   		</div>
+	   		<div class="bottom-information">{{data.blurb}}</div>
+	   </div>
+	</div> <!-- #main-container -->
+</div>

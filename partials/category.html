@@ -1,51 +1,53 @@
-<div class="category-container" ng-init="init()">
-	<category-page></category-page>
-    <div class="item-wrapper clearfix">
-    	<div class="main-information clearfix">
-	    	<div class="event-title">{{data.title}}</div>
-	    	<div class="clearfix">
-	    	<div class="left">
-		    	<div class="image">
-		    		<img ng-src="{{data.image}}" />
-		    	</div>
-		    </div>
-		    <div class="left item-info clearfix">
-		    	<div class="date">
-					<div class="day">{{data.date.day}}Saturday</div>
-					<div class="date-format">{{data.date.format}}6/12</div>
-					<div class="time">{{data.date.time}}6 PM</div>
+<div class="wrapper">
+	<div class="category-container" ng-init="init()">
+		<category-page></category-page>
+	    <div class="item-wrapper clearfix">
+	    	<div class="main-information clearfix">
+		    	<div class="event-title">{{data.title}}</div>
+		    	<div class="clearfix">
+		    	<div class="left">
+			    	<div class="image">
+			    		<img ng-src="{{data.image}}" />
+			    	</div>
+			    </div>
+			    <div class="left item-info clearfix">
+			    	<div class="date">
+						<div class="day">{{data.date | date:'EEEE'}}</div>
+						<div class="date-format">{{data.date | date:'M/d'}}</div>
+						<div class="time">{{data.date| date:'h a'}}</div>
+					</div>
+					
+					<div class="button-actions">
+						<div class="email-btn" ng-click="emailAction()">email</div>
+						<div class="print-btn" ng-click="printAction()">print</div>
+					</div>
+					<div class="map">
+						<google-maps options="mapOptions"></google-maps>
+					</div>
+					<div class="venue">
+						<div class="venue-title">{{data.venue.title}}</div>
+						<div class="phone">{{data.venue.phone | phoneFormat}}</div>
+						<div class="price">{{data.venue.price}}</div>
+						<div class="additional">{{data.venue.additional}}</div>
+					</div>
+					<div class="information">{{data.information}}</div>
 				</div>
-				
-				<div class="button-actions">
-					<div class="email-btn" ng-click="emailAction()">email</div>
-					<div class="print-btn" ng-click="printAction()">print</div>
-				</div>
-				<div class="map">
-					<google-maps options="mapOptions"></google-maps>
-				</div>
-				<div class="venue">
-					<div class="venue-title">{{data.venue.title}}</div>
-					<div class="phone">{{data.venue.phone | phoneFormat}}</div>
-					<div class="price">{{data.venue.price}}</div>
-					<div class="additional">{{data.venue.additional}}</div>
-				</div>
-				<div class="information">{{data.information}}</div>
 			</div>
-		</div>
-		<section class="left">
-            <h2 class="main-events">
-                All {{category}}
-            </h2>
-            <event-summary ng-repeat="data in events" event-data="data"></event-summary>
-        </section>
+			<section class="left">
+	            <h2 class="main-events">
+	                All {{category}}
+	            </h2>
+	            <event-summary ng-repeat="data in otherEvents" event-data="data"></event-summary>
+	        </section>
 
-        <section class="right">
-            <h2 class="main-events">
-               Top Picks for the Week
-            </h2>
-            <top-picks ng-repeat="data in events" picks-data="data"></top-picks>
-        </section>
+	        <section class="right">
+	            <h2 class="main-events">
+	               Top Picks for the Week
+	            </h2>
+	            <top-picks ng-repeat="data in upcomingEvents" picks-data="data"></top-picks>
+	        </section>
+				
 			
-		
-    </div>
-</div> <!-- #main-container -->
+	    </div>
+	</div> <!-- #main-container -->
+</div>

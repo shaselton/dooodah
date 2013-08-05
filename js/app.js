@@ -4,7 +4,8 @@ dodah.config(['$routeProvider', function($routeProvider) {
   $routeProvider.
       when('/', {templateUrl: 'partials/home.html',   controller: 'homeController'}).
       when('/home/:category', {templateUrl: 'partials/home.html',   controller: 'homeController'}).
-      when('/category/:yelpId', {templateUrl: 'partials/category.html',   controller: 'categoryController'}).
+      when('/category/', {templateUrl: 'partials/category.html',   controller: 'categoryController'}).
+      when('/listing/:category', {templateUrl: 'partials/listing.html', controller: 'listingController'}).
       otherwise({redirectTo: '/'});
 }]);
 
