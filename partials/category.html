@@ -5,10 +5,8 @@
 	    	<div class="main-information clearfix">
 		    	<div class="event-title">{{data.title}}</div>
 		    	<div class="clearfix">
-		    	<div class="left">
-			    	<div class="image">
-			    		<img ng-src="{{data.image}}" />
-			    	</div>
+		    	<div class="left image">
+			    	<img ng-src="{{data.image}}" />
 			    </div>
 			    <div class="left item-info clearfix">
 			    	<div class="date">
@@ -37,7 +35,7 @@
 	            <h2 class="main-events">
 	                All {{category}}
 	            </h2>
-	            <event-summary ng-repeat="data in otherEvents" event-data="data"></event-summary>
+	            <event-summary ng-repeat="data in otherEvents | orderBy:'sortDate'" event-data="data"></event-summary>
 	        </section>
 
 	        <section class="right">

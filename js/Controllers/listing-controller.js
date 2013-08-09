@@ -36,9 +36,10 @@
 			results = data.contents;
 			for( var i = 1; i < len; i++ ){ // offset by 1 (i = 1) bc the first object result returned is a "summary" and not actual data to be displayed.
 				scrubbed = data.contents.events[i].event.description.replace(/<[^>]*>?/g, '');
-				truncatedBlurb = ( scrubbed.length > 400 ) ? scrubbed.substring(0, 400) + '...' : scrubbed;
+				truncatedBlurb = ( scrubbed.length > 400 ) ? scrubbed.substring(0, 300) + '...' : scrubbed;
 				$scope.events.push({
 					date: data.contents.events[i].event.start_date.replace(' ', 'T'),
+					sortDate : data.contents.events[i].event.start_date,
 					title:{
 						eventName: data.contents.events[i].event.title,
 						//place:data.businesses[i].name,

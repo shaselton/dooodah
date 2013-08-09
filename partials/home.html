@@ -13,7 +13,7 @@
             <h2 class="main-events">
                 All {{category}} in Orange County
             </h2>
-            <event-summary ng-repeat="data in events" event-data="data"></event-summary>
+            <event-summary ng-repeat="data in events | orderBy:'sortDate'" event-data="data"></event-summary>
         </section>
 
         <section class="right">

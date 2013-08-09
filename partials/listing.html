@@ -12,7 +12,7 @@
 	   </div>
 	   <div class="right-column">
 	   		<div class="column-title">All {{category}} Events in Orange County</div>
-	   		<div class="item-wrapper" ng-repeat="data in events"> 
+	   		<div class="item-wrapper" ng-repeat="data in events | orderBy:'sortDate'"> 
 	   			<div class="top-information">
 	   				<img class="item-image" ng-src="{{data.imgSrc}}" />
 	   				<div class="group">

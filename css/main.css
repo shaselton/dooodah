@@ -254,34 +254,35 @@ span.category-title{
     background: #f16529;
 }
 
+.item-wrapper .left.image{
+    float: none;
+    margin-bottom: 20px;
+}
 
+.item-wrapper img{
+    text-align: center;
+    width: 100%;
+}
 
 .map-canvas{
     width: 218px;
     height: 73px;
 }
 
-.item-wrapper .image img{
-    height: 186px;
-    margin-right: 25px;
-    width: 186px;
+.item-wrapper .map {
+    margin-right: 30px;
 }
 
-.item-wrapper .image,
 .item-wrapper .date,
 .item-wrapper .left{
     float: left;
 }
 
 .item-wrapper .venue,
-.item-wrapper .map,
-.item-wrapper .right{
+.item-wrapper .map{
     float: right;
 }
 
-.item-wrapper .map{
-    margin-right: 60px;
-}
 
 .item-wrapper .venue{
     color: #000;
@@ -320,10 +321,6 @@ span.category-title{
     font: normal 18px Helvetica;
 }
 
-.item-info{
-    width: 75%;
-}
-
 .button-actions{
     float: right;
     text-align: center;
@@ -341,6 +338,7 @@ span.category-title{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3eeee', endColorstr='#f3efef',GradientType=1 ); /* IE6-9 */
     border: 1px solid #908b8b;
     cursor: pointer;
+    display: none;
     font: normal 12px/33px "Helvetica", Arial;
     height: 33px;
     width: 102px;
@@ -480,7 +478,7 @@ nav a:hover {
     }
 
     .header-wrapper{
-        width:77% !important;
+        width: 93% !important;
     }
      
     
@@ -515,17 +513,30 @@ nav a:hover {
         float: right;
         width: 46%;
     }
-
+/*
     .header-category .category:nth-child(-n+2){
         display: inline-block;
         opacity: 1;
     }
-
+*/
     .header-wrapper {
         margin: 0 auto;
         /*width: 73% !important;*/
     }
 
+    .item-wrapper .left.image{
+        float: left;
+        margin-right: 02.436647173%;
+        width: 18.128655%;
+    }
+
+    .item-info{
+        width: 66.048733%;
+    }
+
+    .item-wrapper .map{
+        margin-right: 60px;
+    }
 
 
 }
@@ -571,10 +582,12 @@ nav a:hover {
    Helper classes
    ========================================================================== */
 .header-wrapper{
+    /*
   -webkit-transition: width 0.5s ease-out, opacity 1.0s ease-out 1.0s; 
      -moz-transition: width 0.5s ease-out, opacity 1.0s ease-out 1.0s;
        -o-transition: width 0.5s ease-out, opacity 1.0s ease-out 1.0s;
           transition: width 0.5s ease-out, opacity 1.0s ease-out 1.0s;
+          */
     width: 60%;
     margin: 0 auto;
 }

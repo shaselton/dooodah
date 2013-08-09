@@ -39,6 +39,7 @@
 				truncatedBlurb = ( scrubbed.length > 200 ) ? scrubbed.substring(0, 200) + '...' : scrubbed;
 				$scope.events.push({
 					date: data.contents.events[i].event.start_date.replace(' ', 'T'),
+					sortDate : data.contents.events[i].event.start_date,
 					title:{
 						eventName: data.contents.events[i].event.title,
 						//place:data.businesses[i].name,

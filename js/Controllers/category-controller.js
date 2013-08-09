@@ -22,10 +22,8 @@
 			$scope.data.image = event.imgSrc;
 			$scope.data.title = event.obj.title;
 			$scope.data.venue.title = event.obj.venue.name;
-			//$scope.data.venue.phone = event.venue.phone;
-			//$scope.data.venue.price = "??? <unknown> TODO: change me!";
 			$scope.mapOptions = setMaps( [event.obj.venue.latitude, event.obj.venue.longitude] );
-			$scope.data.information = event.obj.description.replace(/<[^>]*>?/g, '');;
+			$scope.data.information = event.obj.description.replace(/<[^>]*>?/g, '').substring(0,300);
 				//$scope.$apply();
 				//getSimilarCategories( data.categories[0] ); // just taking the first suggestion offer they give	
 		};
