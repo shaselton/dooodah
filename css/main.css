@@ -264,9 +264,8 @@ span.category-title{
     width: 100%;
 }
 
-.map-canvas{
-    width: 218px;
-    height: 73px;
+.left.item-info{
+    position: relative;
 }
 
 .item-wrapper .map {
@@ -278,17 +277,17 @@ span.category-title{
     float: left;
 }
 
-.item-wrapper .venue,
-.item-wrapper .map{
-    float: right;
-}
+
 
 
 .item-wrapper .venue{
+    position: relative;
     color: #000;
     font: normal 12px 'Helvetica';
-    margin-right: 40px;
-    width: 150px;
+    margin-right: 13px;
+    width: 90px;
+    left: 100px;
+    top: -170px;
 }
 
 .venue .venue-title{
@@ -324,6 +323,11 @@ span.category-title{
 .button-actions{
     float: right;
     text-align: center;
+}
+
+.map-canvas{
+    width: 100%;
+    height: 100px;
 }
 
 .button-actions .email-btn,
@@ -409,6 +413,7 @@ nav a:hover {
     padding: 20px 0;
 }
 
+
 .category a{
     text-decoration: none;
 }
@@ -418,6 +423,11 @@ nav a:hover {
     font-size: 12px;
     line-height: 12px;
 }
+
+ .item-wrapper .map{
+        clear: both;
+        margin-top: 10px;
+    }
 
 /* ===============
     ALL: IE Fixes
@@ -480,6 +490,9 @@ nav a:hover {
     .header-wrapper{
         width: 93% !important;
     }
+
+
+
      
     
 }
@@ -536,18 +549,31 @@ nav a:hover {
 
     .item-wrapper .map{
         margin-right: 60px;
+        float: right;
+        clear: none;
+        margin-top: 0px;
     }
 
+    .map-canvas{
+        width: 218px;
+        height: 73px;
+    }
+
+    .item-wrapper .venue{
+        float: right;
+        position: initial;
+    }
+   
 
 }
 
 @media only screen and (min-width: 1070px) {
-
+/*
     .header-category .category:nth-child(-n+3){
         display: inline-block;
         opacity: 1;
     }
-
+*/
 }
 
 @media only screen and (min-width: 1140px) {
@@ -588,7 +614,7 @@ nav a:hover {
        -o-transition: width 0.5s ease-out, opacity 1.0s ease-out 1.0s;
           transition: width 0.5s ease-out, opacity 1.0s ease-out 1.0s;
           */
-    width: 60%;
+    width: 86%;
     margin: 0 auto;
 }
 

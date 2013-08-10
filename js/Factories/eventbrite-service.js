@@ -12,6 +12,7 @@
 
 			params.app_key='V2GFJHBPNQVH3SLUPA';
 			params.city='Fullerton';
+			params.date = "2013-08-11 2013-08-29";
 			params.within=40;
 
 			var success = function(data){

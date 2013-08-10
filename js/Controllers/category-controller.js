@@ -23,7 +23,7 @@
 			$scope.data.title = event.obj.title;
 			$scope.data.venue.title = event.obj.venue.name;
 			$scope.mapOptions = setMaps( [event.obj.venue.latitude, event.obj.venue.longitude] );
-			$scope.data.information = event.obj.description.replace(/<[^>]*>?/g, '').substring(0,300);
+			$scope.data.information = event.obj.description.replace(/<[^>]*>?/g, '').substring(0,600);
 				//$scope.$apply();
 				//getSimilarCategories( data.categories[0] ); // just taking the first suggestion offer they give	
 		};

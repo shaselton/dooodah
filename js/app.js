@@ -1,4 +1,4 @@
-var dodah = angular.module('dooodah',[ 'googleMaps' ]);
+var dodah = angular.module('dooodah',[ 'googleMaps' , 'calendarfiddle']);
 
 dodah.config(['$routeProvider', function($routeProvider) {
   $routeProvider.
